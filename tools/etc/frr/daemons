@@ -14,9 +14,9 @@
 #
 # The watchfrr and zebra daemons are always started.
 #
-bgpd=no
-ospfd=no
-ospf6d=no
+bgpd=yes
+ospfd=yes
+ospf6d=yes
 ripd=no
 ripngd=no
 isisd=no
@@ -37,7 +37,7 @@ vrrpd=no
 # Check /etc/pam.d/frr if you intend to use "vtysh"!
 #
 vtysh_enable=yes
-zebra_options="  -A 127.0.0.1 -s 90000000"
+zebra_options="  -A 127.0.0.1 -M fpm:netlink"
 bgpd_options="   -A 127.0.0.1"
 ospfd_options="  -A 127.0.0.1"
 ospf6d_options=" -A ::1"

@@ -24,7 +24,7 @@ docker rm "${CONTAINER_ID}"
 docker build \
 	--file=docker/alpine/Dockerfile \
 	--build-arg="PKGVER=$PKGVER" \
-	--tag="frr:alpine-$GITREV" \
+	--tag="mars/frr:alpine-$GITREV" \
 	.
 
 docker rmi "frr:alpine-builder-$GITREV"
